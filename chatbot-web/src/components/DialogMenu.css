@@ -1,0 +1,75 @@
+
+@media (max-width: 768px) {
+
+    .hamburger-button {
+      justify-content: center;
+      align-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      display: block;
+      cursor: pointer;
+      border: 0 solid #e5e7eb;
+      background-color: transparent;
+    }
+  
+    .dialog {
+      padding: 1.5rem;
+      gap: .5rem;
+      border-bottom-width: 1px;
+      background-color: #fff;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      top: 4rem;
+      z-index: 50;
+      left: 0;
+      right: 0;
+      position: fixed;
+      animation-duration: .5s;
+      transition-duration: .5s;
+  
+    }
+  
+    .dialog-link {
+      outline-width: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: start;
+      padding: .5rem;
+      border-radius: .375rem;
+      gap: .75rem;
+      flex-direction: row;
+      width: 100%;
+      display: flex;
+      color: inherit;
+      text-decoration: inherit;
+    }
+  
+    .dialog-mylink {
+      outline-width: 0;
+      color: rgb(9 9 11);
+      text-align: start;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      padding-left: .125rem;
+      padding-right: .125rem;
+      border-color: rgb(244 244 245);
+      border-bottom-width: 1px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-top-width: 0px;
+      background-color: #fff;
+      border-style: solid;
+      flex-direction: row;
+      width: 100%;
+      display: flex;
+      text-decoration: inherit;
+      font-size: 1.05rem;
+    }
+  
+  }
+  

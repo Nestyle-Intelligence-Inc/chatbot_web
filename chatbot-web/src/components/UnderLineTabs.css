@@ -1,0 +1,27 @@
+.linetabs-container {
+    font-weight: 500;
+    padding-top: .25rem;
+    padding-right: .25rem;
+    padding-left: .25rem;
+    white-space: nowrap;
+    gap: 1.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .tab-button {
+    color: #71717a;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: .25rem;
+    position: relative;
+  }
+  
+  .tab-button.active {
+    border-bottom: 3px solid #8a5cf6;
+    color: #000;
+  }

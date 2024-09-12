@@ -1,0 +1,10 @@
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    color: #6078EA;
+  }
+  
