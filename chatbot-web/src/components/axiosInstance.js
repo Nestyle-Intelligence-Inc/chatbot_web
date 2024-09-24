@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://34.168.31.3',
+  baseURL: process.env.REACT_APP_API_URL,
   timeout: 10000, 
 });
 
 const refreshAccessToken = async () => {
   try {
-    const response = await axios.post('http://34.168.31.3/users/refresh', {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/refresh`, {
       refresh_token: localStorage.getItem('refreshToken')
     });
     sessionStorage.setItem('accessToken', response.data.access_token); 
