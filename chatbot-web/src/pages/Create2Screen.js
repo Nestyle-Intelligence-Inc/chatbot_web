@@ -87,7 +87,7 @@ function Create2Screen() {
     sessionStorage.setItem("qnaSections", JSON.stringify(qnaSections));
 
     const fileSize = files.reduce((acc, file) => acc + file.size, 0);
-    const textSize = text.length;
+    const textSize = text ? text.length : 0;
     const linksSize = links.length;
     const qnaSize = qnaSections.length;
 
@@ -190,6 +190,19 @@ function Create2Screen() {
    
       console.log(response.data);
       showToast("챗봇이 생성되었습니다.", "success");
+
+      // 상태 초기화
+      setFiles([]);
+      setText("");
+      setLinks([]);
+      setQnaSections([]);
+
+      // sessionStorage 초기화
+      sessionStorage.removeItem("files");
+      sessionStorage.removeItem("text");
+      sessionStorage.removeItem("links");
+      sessionStorage.removeItem("qnaSections");
+
       navigate("/dashboard/chatbots");
     } catch (error) {
       console.error(error);
@@ -1043,7 +1056,7 @@ const TextSection = ({ text, onTextChange }) => (
       onChange={onTextChange}
     ></textarea>
     <p class="h-8 text-center text-sm text-zinc-600">
-      {text.length} characters
+      {text ? text.length : 0} characters
     </p>
   </div>
 );

@@ -533,7 +533,7 @@ const TextSection = ({ text, onTextChange }) => (
       onChange={onTextChange}
     ></textarea>
     <p class="h-8 text-center text-sm text-zinc-600">
-      {text.length} characters
+    {text ? text.length : 0} characters
     </p>
   </div>
 );
