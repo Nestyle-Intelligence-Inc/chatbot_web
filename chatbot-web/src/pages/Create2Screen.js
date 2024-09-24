@@ -31,7 +31,7 @@ function Create2Screen() {
 
   const handleResourceButton = () => {
     window.location.href =
-      "http://34.168.31.3/docs#/default/create_chatbot_endpoint_chatbots_post";
+      `${process.env.REACT_APP_API_URL}/docs#/default/create_chatbot_endpoint_chatbots_post`;
   };
 
   const [files, setFiles] = useState([]);

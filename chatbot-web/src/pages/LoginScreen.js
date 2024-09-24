@@ -14,12 +14,11 @@ function LoginScreen() {
 
   const from = location.state?.from || "/";
 
-  const clientId =
-    "665495678066-955g63lgtasttrl4v01escurfv05rbcd.apps.googleusercontent.com";
+  const clientId = process.env.REACT_APP_CLIENT_ID;
 
   const handleLogin = (email) => {
     axios
-      .post("http://34.168.31.3/users/login", { email: email })
+      .post(`${process.env.REACT_APP_API_URL}/users/login`, { email: email })
       .then((res) => {
         showToast("로그인 성공!", "success");
         setResponse(res.data);
@@ -65,7 +64,7 @@ function LoginScreen() {
                 fill="#B2AEB9"
               ></path>
             </svg>
-            <span class="font-normal text-lg text-zinc-950">Chatbase</span>
+            <span class="font-normal text-lg text-zinc-950">AITALK</span>
           </div>
         </a>
         <div class="flex h-full flex-col items-center justify-center gap-4">
