@@ -309,10 +309,14 @@ function ManageScreen() {
   };
 
   const handleUpdateChatbot = async (name, description) => {
+    console.log("settings chatbotInfo :: ", chatbotInfo);
     const formData = new FormData();
     formData.append("name", name);
     formData.append("description", description);
     formData.append("id", chatbotInfo.id);
+    formData.append("text", chatbotInfo.text);
+    formData.append("website_links", chatbotInfo.website_links);
+    formData.append("qa_pairs", chatbotInfo.qa_examples);
 
     axiosInstance
       .post('/chatbots/create_chatbot', formData, {
